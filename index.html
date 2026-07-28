@@ -36,7 +36,7 @@ body {
   background-size: cover;
   background-position: center 68%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .hero::after {
@@ -52,12 +52,12 @@ body {
 .content {
   position: relative;
   z-index: 2;
-  width: min(680px, calc(100% - 64px));
+  width: 100%;
+  width: min(760px, calc(100% - 160px));
   max-width: none;
-  margin-left: clamp(28px, 3vw, 52px);
-  margin-bottom: 0;
-  padding: 28px 30px;
-  background-color: rgba(46,32,19,0.32);
+  padding: 24px 20px;
+  margin: 0 0 5vh 80px;
+  background-color: rgba(35,22,15,0.58);
   border-radius: 4px;
 }
 
@@ -68,7 +68,7 @@ body {
   font-size: 36px;
   line-height: 1.15;
   color: var(--text-on-photo);
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
 }
 
 .body-copy {
@@ -86,7 +86,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.01em;
   color: var(--text-on-photo);
-  margin: 12px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .form-intro {
@@ -95,7 +95,7 @@ body {
   line-height: 1.5;
   color: var(--text-on-photo);
   opacity: 0.9;
-  margin: 2px 0 10px 0;
+  margin: 2px 0 8px 0;
 }
 
 form { margin: 0; }
@@ -130,20 +130,22 @@ form { margin: 0; }
   transition: background-color 9999s ease-in-out 0s;
 }
 
-@media (max-width: 600px) {
-  .hero {
-    background-position: center 82%;
-    align-items: center;
+@media (max-width: 900px) {
+  .content {
+    width: min(680px, calc(100% - 80px));
+    margin-left: 40px;
   }
+}
+
+@media (max-width: 600px) {
+  .hero { background-position: center 82%; }
   .content {
     width: calc(100% - 32px);
     max-width: none;
-    margin: 0 auto;
-    padding: 22px 18px;
+    padding: 20px 18px;
+    margin: 0 auto 4vh auto;
   }
-  .title {
-    font-size: 26px;
-  }
+  .title { font-size: 26px; }
 }
 </style>
 </head>
@@ -161,9 +163,7 @@ form { margin: 0; }
 
     <p class="body-copy">Expériences, invitations, avant-premières&hellip;<br/>Des moments que l'on ne partage pas seulement derrière un écran.</p>
 
-    <p class="sub-line">Sois parmi les prochaines à vivre la suite.</p>
-
-    <p class="form-intro">Entre dans la confidence et accède aux avantages réservés aux initiées.</p>
+    <p class="sub-line">Entre dans la confidence et accède aux avantages réservés aux initiées.</p>
 
     <div class="klaviyo-wrap">
       <div class="klaviyo-form-VBWdyf"></div>
