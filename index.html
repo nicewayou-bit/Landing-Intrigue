@@ -29,7 +29,7 @@ body {
   width: 100%;
   background-image: url('https://d3k81ch9hvuctc.cloudfront.net/company/SczpWt/images/4deb8241-b38d-4457-ab89-0a5045f6849f.jpeg');
   background-size: cover;
-  background-position: center 25%;
+  background-position: center 68%;
   display: flex;
   align-items: flex-end;
 }
@@ -49,57 +49,52 @@ body {
   z-index: 2;
   width: 100%;
   max-width: 55%;
-  padding: 40px 56px 64px 56px;
+  padding: 40px 56px 40px 56px;
 }
 
 .title {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 1.22;
+  font-size: 36px;
+  line-height: 1.2;
   color: var(--text-on-photo);
-  margin: 0 0 20px 0;
+  margin: 0 0 12px 0;
 }
 
 .body-copy {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.55;
   color: var(--text-on-photo);
   opacity: 0.92;
-  margin: 0 0 6px 0;
+  margin: 0 0 4px 0;
 }
 
 .sub-line {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.01em;
   color: var(--text-on-photo);
-  margin: 22px 0 10px 0;
+  margin: 14px 0 4px 0;
 }
 
 .form-intro {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text-on-photo);
   opacity: 0.9;
-  margin: 0 0 22px 0;
+  margin: 0 0 10px 0;
 }
 
 form { margin: 0; }
 
-/* Rend le bouton d'envoi du formulaire Klaviyo plein/visible plutôt qu'en simple contour.
-   Si le style défini directement dans l'éditeur Klaviyo est déjà satisfaisant, ce bloc
-   peut être retiré — il sert de filet de sécurité si le style natif reste trop discret. */
-.klaviyo-form button,
-.needsclick button {
-  background-color: var(--accent) !important;
-  border: none !important;
-  color: var(--dark) !important;
-  font-weight: 700 !important;
+/* Resserre l'espace entre le texte et le formulaire Klaviyo (qui a ses propres marges
+   internes par défaut) pour que les deux blocs se lisent comme un ensemble compact. */
+.klaviyo-form-VBWdyf {
+  margin-top: -6px !important;
 }
 
 @media (max-width: 900px) {
@@ -107,8 +102,8 @@ form { margin: 0; }
 }
 
 @media (max-width: 600px) {
-  .content { padding: 32px 20px 40px 20px; max-width: 100%; }
-  .title { font-size: 28px; }
+  .content { padding: 24px 20px 24px 20px; max-width: 100%; }
+  .title { font-size: 26px; }
 }
 </style>
 </head>
