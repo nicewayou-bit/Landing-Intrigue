@@ -27,9 +27,9 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-image: url('https://d3k81ch9hvuctc.cloudfront.net/company/SczpWt/images/4169fccd-44c6-4be2-85a3-bc04a445868b.jpeg');
+  background-image: url('https://d3k81ch9hvuctc.cloudfront.net/company/SczpWt/images/4deb8241-b38d-4457-ab89-0a5045f6849f.jpeg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   display: flex;
   align-items: flex-end;
 }
@@ -40,30 +40,30 @@ body {
   inset: 0;
   background: linear-gradient(180deg,
     rgba(46,32,19,0.05) 0%,
-    rgba(46,32,19,0.35) 45%,
-    rgba(46,32,19,0.88) 100%);
+    rgba(46,32,19,0.4) 40%,
+    rgba(46,32,19,0.92) 100%);
 }
 
 .content {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 460px;
-  padding: 40px 32px 56px 32px;
+  max-width: 55%;
+  padding: 40px 56px 64px 56px;
 }
 
 .title {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 600;
-  font-size: 34px;
-  line-height: 1.25;
+  font-size: 40px;
+  line-height: 1.22;
   color: var(--text-on-photo);
-  margin: 0 0 18px 0;
+  margin: 0 0 20px 0;
 }
 
 .body-copy {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.7;
   color: var(--text-on-photo);
@@ -73,11 +73,11 @@ body {
 
 .sub-line {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--accent);
-  margin: 20px 0 8px 0;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--text-on-photo);
+  margin: 22px 0 10px 0;
 }
 
 .form-intro {
@@ -91,12 +91,19 @@ body {
 
 form { margin: 0; }
 
-.disclaimer {
-  font-size: 11px;
-  color: var(--text-on-photo);
-  opacity: 0.75;
-  line-height: 1.6;
-  margin-top: 14px;
+/* Rend le bouton d'envoi du formulaire Klaviyo plein/visible plutôt qu'en simple contour.
+   Si le style défini directement dans l'éditeur Klaviyo est déjà satisfaisant, ce bloc
+   peut être retiré — il sert de filet de sécurité si le style natif reste trop discret. */
+.klaviyo-form button,
+.needsclick button {
+  background-color: var(--accent) !important;
+  border: none !important;
+  color: var(--dark) !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 900px) {
+  .content { max-width: 70%; }
 }
 
 @media (max-width: 600px) {
@@ -125,8 +132,6 @@ form { margin: 0; }
     <p class="form-intro">Entre dans la confidence et accède aux avantages réservés aux initiées.</p>
 
     <div class="klaviyo-form-VBWdyf"></div>
-
-    <p class="disclaimer">Tu recevras les actualités du projet par email. Désinscription à tout moment.</p>
 
   </div>
 </div>
