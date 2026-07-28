@@ -50,7 +50,7 @@ body {
   width: 100%;
   max-width: 55%;
   padding: 24px 32px;
-  margin: 0 0 5vh 24px;
+  margin: 0 0 5vh 8vw;
   background-color: rgba(46,32,19,0.32);
   border-radius: 4px;
 }
@@ -59,7 +59,7 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 600;
-  font-size: 44px;
+  font-size: 30px;
   line-height: 1.15;
   color: var(--text-on-photo);
   margin: 0 0 12px 0;
@@ -111,13 +111,26 @@ form { margin: 0; }
   width: 100% !important;
 }
 
+/* Empêche le navigateur d'imposer un fond bleu clair sur les champs
+   pré-remplis automatiquement (autofill), pour garder le style sombre voulu. */
+.klaviyo-textinput:-webkit-autofill,
+.klaviyo-emailinput:-webkit-autofill,
+.klaviyo-textinput:-webkit-autofill:hover,
+.klaviyo-emailinput:-webkit-autofill:hover,
+.klaviyo-textinput:-webkit-autofill:focus,
+.klaviyo-emailinput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #F5EDE0 !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(122,79,43,0.35) inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 @media (max-width: 900px) {
   .content { max-width: 70%; }
 }
 
 @media (max-width: 600px) {
   .hero { background-position: center 82%; }
-  .content { padding: 20px 20px; margin: 0 12px 4vh 12px; max-width: 100%; }
+  .content { padding: 20px 20px; margin: 0 8px 4vh 24px; max-width: 100%; }
   .title { font-size: 30px; }
 }
 </style>
