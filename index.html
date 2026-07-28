@@ -39,9 +39,9 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    rgba(46,32,19,0.05) 0%,
-    rgba(46,32,19,0.4) 40%,
-    rgba(46,32,19,0.92) 100%);
+    rgba(46,32,19,0.25) 0%,
+    rgba(46,32,19,0.6) 30%,
+    rgba(46,32,19,0.95) 100%);
 }
 
 .content {
@@ -91,8 +91,17 @@ body {
 
 form { margin: 0; }
 
-/* Aligne le formulaire Klaviyo avec le bloc texte : on retire toute marge/padding
-   interne par défaut du wrapper Klaviyo, qui ne suit pas forcément le padding de .content. */
+/* Filet de sécurité : quelle que soit la largeur réelle que Klaviyo applique en interne
+   à son formulaire, ce bloc l'empêche de déborder visuellement du bloc texte. */
+.klaviyo-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.klaviyo-form-VBWdyf,
+.klaviyo-form-VBWdyf * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 .klaviyo-form-VBWdyf {
   margin: 0 !important;
   padding: 0 !important;
@@ -128,7 +137,9 @@ form { margin: 0; }
 
     <p class="form-intro">Entre dans la confidence et accède aux avantages réservés aux initiées.</p>
 
-    <div class="klaviyo-form-VBWdyf"></div>
+    <div class="klaviyo-wrap">
+      <div class="klaviyo-form-VBWdyf"></div>
+    </div>
 
   </div>
 </div>
